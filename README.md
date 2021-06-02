@@ -6,23 +6,24 @@ Created by Serena Holte
 
 To get started, save the six Matlab files in a folder:
 
+
+This is the main script with which to run and change parameters described below:
 	SocialLearning_MainProgram.m 
-This is the main script with which to run and change parameters described below.
 
+This function uses the “move” output from each individual to update their knowledge matrices:
 	moveToHistory.m
-This function uses the “move” output from each individual to update their knowledge matrices.
 
+This function determines the move for “innovate” strategies (innovate or exploit):
 	InnovateStrategy.m
-This function determines the move for “innovate” strategies (innovate or exploit).
 
+This function determines the move for “observe” strategies (observe or exploit):
 	ObserveStrategy.m
-This function determines the move for “observe” strategies (observe or exploit).
 
+This function determines the move for “mixed” strategies (innovate, observe, or exploit):
 	MixedStrategy.m
-This function determines the move for “mixed” strategies (innovate, observe, or exploit).
 
+This function creates a compiled matrix of each individual’s information at death or end of loop:
 	createResultsTable.m
-This function creates a compiled matrix of each individual’s information at death or end of loop.
 
 
 Open the SocialLearning_MainProgram file to toggle parameters:
