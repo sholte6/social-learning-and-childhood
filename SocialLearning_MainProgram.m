@@ -1394,14 +1394,6 @@ sS1 = results(:,results(4,:)==1);
 sS2 = results(:,results(4,:)==2);
 sS3 = results(:,results(4,:)==3);
 
-% Computes the fractions each strategy used observe, innovate, and exploit
-% Note: values were not considered relevant to our study
-sS1Move = [(mean(sS1(7,:))),(mean(sS1(8,:))),(mean(sS1(9,:)))];
-sS2Move = [(mean(sS2(7,:))),(mean(sS2(8,:))),(mean(sS2(9,:)))];
-sS3Move = [(mean(sS3(7,:))),(mean(sS3(8,:))),(mean(sS3(9,:)))];
-fractionMove(loop,2:10)=[sS1Move,sS2Move,sS3Move];
-
-
 lastRoundIndices=(finalResults(1,:)==numRounds);
 lastRound=finalResults(:,lastRoundIndices);
 
