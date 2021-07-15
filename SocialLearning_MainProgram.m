@@ -1414,11 +1414,6 @@ numS2=sum(indicesS2);
 indicesS3=sum(lastRound(4,:)==3);
 numS3=sum(indicesS3);
 
-% Calculates how many behaviors out of the numActs were learned by the
-% population
-popKnowledge(41,:)=sum(popKnowledge(1:40,:)~=0);
-populationKnowledge=nnz(popKnowledge(41,:));
-
 strategyResults(loop,2:4)=[numS1, numS2, numS3];
 
 disp(loop)
