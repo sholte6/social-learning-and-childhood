@@ -364,7 +364,7 @@ elseif move =='die'
                 strategy=totPayPop(2,34);
                 break
             elseif whatStrat<=(sum(totPayPop2(3,1:35)))
-                strategy=totPayPop(2,25);
+                strategy=totPayPop(2,35);
                 break
             elseif whatStrat<=(sum(totPayPop2(3,1:36)))
                 strategy=totPayPop(2,36);
