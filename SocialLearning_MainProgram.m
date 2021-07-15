@@ -41,7 +41,7 @@ numLoops=100; % The number of loops of each set of a given number of rounds (abo
 % row6--> the number of known acts after numRounds
 
 loop=1; % initializes loop 
-strategyResults=zeros(numLoops,5); % creates a results matrix to add individual's info after death or at the end of the loop
+strategyResults=zeros(numLoops,4); % creates a results matrix to add individual's info after death or at the end of the loop
 strategyResults(:,1)=(1:numLoops); 
 fractionMove = zeros(numLoops,10);
 fractionMove(:,1)=(1:numLoops);
@@ -1420,7 +1420,6 @@ popKnowledge(41,:)=sum(popKnowledge(1:40,:)~=0);
 populationKnowledge=nnz(popKnowledge(41,:));
 
 strategyResults(loop,2:4)=[numS1, numS2, numS3];
-strategyResults(loop,5)=populationKnowledge;
 
 disp(loop)
 loop=loop+1;
@@ -1433,7 +1432,7 @@ end
 
 strategyResultsTbl=array2table(strategyResults);
 
-strategyResultsTbl.Properties.VariableNames = {'Loop' 'StrategyS1' 'StrategyS2' 'StrategyS3' 'PopulationKnowledge'};
+strategyResultsTbl.Properties.VariableNames = {'Loop' 'Innovate' 'Observe' 'Mixed'};
 
 filename = 'strategyResults.xlsx';
 
