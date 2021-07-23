@@ -613,12 +613,12 @@ while rounds<=numRounds % creates  a loop for the function to continue until end
                                  
         if rounds==1 % on first round, create initial behavior array
            y=exprnd(1); % creates random value from exp. dist.
-           Payoff=round(y.^2)*2; % squares, doubles, and rounds (to int) values of y for the Payoff array
+           Payoff=round((y.^2)*2); % squares, doubles, and rounds (to int) values of y for the Payoff array
                   
            if Payoff < 50 % sets a limit for the value of Payoff (50)
 
                y2=exprnd(1);
-               risk=round(y2.^2)*2; 
+               risk=round((y2.^2)*2); 
                probDanger = rand;
                if (probDanger<=pd)&&(risk<50)
                    risk=-1*risk; % assigns a risk value for an act if within the danger probability 
@@ -637,7 +637,7 @@ while rounds<=numRounds % creates  a loop for the function to continue until end
             probability=rand;
             if probability<=pc % if random value is less than or equal to 0.1 (10%), then change value of payoff
                 y=exprnd(1); % creates random value from exp. dist.
-                Payoff=round(y.^2)*2; % squares, doubles, and rounds (to int) values of y for the Payoff array
+                Payoff=round((y.^2)*2); % squares, doubles, and rounds (to int) values of y for the Payoff array
         
                 if Payoff < 50 % sets a limit for the value of Payoff (50)
                     behaviors(2,a)=Payoff;
