@@ -5,22 +5,12 @@ po=1; % probability of observe error in payoff and risk
 mu=0; % mu is the mean of the uniformly distributed numbers for observe error
 sigma=1; % sigma is the stddev of the uniformly distributed numbers for observe error
 
-% timesExp=myHistory(2,:)==1;
-% payoffExp=myHistory(4,timesExp);
-% sumPayExp=sum(payoffExp);
-% totPayPop(1,numIndiv)=(sumPayExp/roundsAlive);
-% meanPayPop=sum(totPayPop(1,:));
-% Pr=(sumPayExp/roundsAlive)/meanPayPop;
-% totPayPop(3,numIndiv)=Pr;
 
 % totPayPop
 % row1--> mean lifetime payoff of numIndiv (sumPayExp/roundsAlive)
 % row2--> strategy numIndiv is following currently
 % row3--> mean lifetime payoff of indiv divided by the sum of all of the indiv in population
 
-% switch move
-% case -1
-% Note: case/switch code was changed to if/elseif due to case being imcompatible with a version of matlab used at a later time
 if move == -1
 
         myHistory(2,roundsAlive)=-1; % input move of innovate into myHistory
@@ -69,7 +59,6 @@ if move == -1
             totPayPop(2,numIndiv)=3;
         end
         
-%     case 0 % if strategy outputs observe
 elseif move == 0
 
         if rounds==1
@@ -157,7 +146,6 @@ elseif move == 0
             totPayPop(2,numIndiv)=3;
         end
 
-%     case 1 % if strategy outputs exploit, exploit the act with highest known payoff
 elseif move == 1
 
          myHistory(2,roundsAlive)=1; % input move of exploit into myHistory
@@ -211,7 +199,6 @@ elseif move == 1
             didExploit(5,numIndiv)=3;
         end
         
-%     case 'die' % if the indiv dies on this round,
 elseif move =='die'
 
     % Input information of individual into results matrix
